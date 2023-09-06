@@ -7,7 +7,7 @@ class Rectangle {
             this.height = h;
 
         } else {
-            Object.create()
+            Object.create(null)
         }
     }
 }
