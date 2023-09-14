@@ -15,6 +15,5 @@ request.get(url, (error, response, body) => {
             return;
         }
         console.log(`File ${Path} saved.`);
-        console.log(`${body}\n(${body.length} chars long)`);
     });
 });
