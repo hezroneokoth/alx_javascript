@@ -9,16 +9,16 @@ request(apiUrl, (error, response, body) => {
         return;
     }
     const film = JSON.parse(body);
-    const xctersUrls = film.xcters;
+    const charactersUrls = film.characters;
 
-    xctersUrls.forEach(xcterUrl => {
-        request(xcterUrl, (error, response, body) => {
+    charactersUrls.forEach(characterUrl => {
+        request(characterUrl, (error, response, body) => {
             if (error) {
                 console.error(error);
                 return;
             }
-            const xcter = JSON.parse(body);
-            console.log(xcter.name);
+            const character = JSON.parse(body);
+            console.log(character.name);
         });
     });
 });
