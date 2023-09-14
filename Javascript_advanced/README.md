@@ -1,77 +1,17 @@
-# JAVASCRIPT
+# Javascript advanced
 
-## Background Context
+## JavaScript
 
-JavaScript is used for many things. At ALX, you will use JavaScript for 2 reasons:
+## Learning Objectives
 
-1. Scripting (same as we did with Python)
-2. Web front-end
-
-For the moment, and for learning all basic concepts of this language, we will do some scripting.
-
-![Alt text](Javascript-535.png.jpeg)
-
-## More Info
-
-### Install Node 14
-
-    $ curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-
-    $ sudo apt-get install -y nodejs
-
-### Install semi-standard
-
-#### Documentation
-
-    $ sudo npm install semistandard --global
-
-## Quiz
-
-### Question #0
-
-Does Javascript have Set as a native datatype?
-
-No
-
-### Question #1
-
-Does Javascript have String as a native datatype?
-
-Yes
-
-### Question #2
-
-What does let mean?
-
-It’s the keyword to define a variable with optionally initializing it to a value
-
-It’s the keyword to define a variable that can be re-assign during the execution
-
-It’s the keyword to define a variable in the local scope
-
-### Question #3
-
-Does Javascript have Array as a native datatype?
-
-Yes
-
-### Question #4
-
-What does const mean?
-
-It’s the keyword to define a constant variable
-
-It’s the keyword to define a variable in the local scope
-
-### Question #5
-
-Does Javascript have Dictionary as a native datatype?
-
-No
-
-    Tips:
-
-    Everything is Object and Object type in Javascript is powerful.
+1. What is lexical scoping in Javascript
+2. What is closure in Javascript
+3. How to use closure
+4. How to chain different closures
+5. How to simulate private methods with Closure
+6. The execution stack order with Javascript
+7. How to use binding
+8. How to use callbacks
 
 ## Contributing
 
