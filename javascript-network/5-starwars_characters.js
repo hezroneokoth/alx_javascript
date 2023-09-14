@@ -3,7 +3,11 @@
 const request = require('request');
 const movieId = process.argv[2];
 const apiUrl = `https://swapi.dev/api/films/${movieId}/`;
-request(apiUrl, (error, response, body) => {
+const requestOptions = {
+    timeout: 60000
+};
+
+request(apiUrl, requestOptions, (error, response, body) => {
     if (error) {
         console.error(error);
         return;
