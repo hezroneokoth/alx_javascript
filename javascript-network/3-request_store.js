@@ -9,7 +9,7 @@ request.get(url, (error, response, body) => {
         console.error(error);
         return;
     }
-    fs.writeFile(Path, body, 'utf-8', (wError) => {
+    fs.wFile(Path, body, 'utf-8', (wError) => {
         if (wError) {
             console.error(wError);
             return;
