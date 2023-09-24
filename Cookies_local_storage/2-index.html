@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating a Cookie</title>
+</head>
+
+<body>
+    <h1>Login to the website</h1>
+    <div>
+        <label for="firstname">First Name:</label>
+        <input type="text" id="firstname">
+    </div>
+    <div>
+        <label for="email">Email:</label>
+        <input type="text" id="email">
+    </div>
+    <p><strong>Cookies</strong></p>
+    <button onclick="setCookies()">Log me in</button>
+    <button onclick="showCookies()">Show the cookies</button>
+    <script>
+        function setCookies() {
+            const firstnameValue = document.getElementById('firstname').value;
+            const emailValue = document.getElementById('email').value;
+
+            // This block calculates the expiration date (exactly 10 days from now)
+            const expirationDate = new Date();
+            expirationDate.setDate(expirationDate.getDate() + 10);
+
+            // This block converts the expiration date to GMT
+            const expires = expirationDate.toGMTString();
+
+            // This sets the cookies with an expiration date
+            document.cookie = `firstname=${firstnameValue}; expires=${expires}`;
+            document.cookie = `email=${emailValue}; expires=${expires}`;
+        }
+
+        // Modified to display the paragraph Email: EMAIL - Firstname: FIRSTNAME
+        function showCookies() {
+            const firstnameCookie = getCookie('firstname');
+            const emailCookie = getCookie('email');
+
+            const paragraph = document.createElement('p');
+            paragraph.innerHTML = `Email: ${emailCookie} - Firstname: ${firstnameCookie}`;
+            document.body.appendChild(paragraph);
+        }
+
+        // Added a getCookie function
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+            return '';
+        }
+    </script>
+</body>
+
+</html>
