@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating a Cookie</title>
+</head>
+
+<body>
+    <h1>Login to the website</h1>
+    <div>
+        <label for="firstname">First Name:</label>
+        <input type="text" id="firstname">
+    </div>
+    <div>
+        <label for="email">Email:</label>
+        <input type="text" id="email">
+    </div>
+    <p><strong>Cookies</strong></p>
+    <button onclick="setCookies()">Log me in</button>
+    <button onclick="showCookies()">Show the cookies</button>
+    <script>
+        function setCookies() {
+            const firstnameValue = document.getElementById('firstname').value;
+            const emailValue = document.getElementById('email').value;
+
+            // This block calculates the expiration date (10 days from now)
+            const expirationDate = new Date();
+            expirationDate.setDate(expirationDate.getDate() + 10);
+
+            // This block converts the expiration date to GMT format
+            const expires = expirationDate.toGMTString();
+
+            // This block sets the cookies with expiration date
+            document.cookie = `firstname=${firstnameValue}; expires=${expires}`;
+            document.cookie = `email=${emailValue}; expires=${expires}`;
+        }
+
+        function showCookies() {
+            const cookies = document.cookie;
+            const paragraph = document.createElement('p');
+            paragraph.innerHTML = `Cookies: ${cookies}`;
+            document.body.appendChild(paragraph);
+        }
+    </script>
+</body>
+
+</html>
