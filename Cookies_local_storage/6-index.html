@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Shopping Cart</title>
+</head>
+
+<body>
+    <script>
+        // This function checks if session storage is available
+        function checkSessionStorage() {
+            try {
+                const testKey = 'test';
+                sessionStorage.setItem(testKey, testKey);
+                sessionStorage.removeItem(testKey);
+                return true;
+            } catch (e) {
+                return false;
+            }
+        }
+
+        // The available shopping items contained in this array
+        const availableItems = ['Shampoo', 'Soap', 'Sponge', 'Water'];
+
+        // This function adds items to cart
+        function addItemToCart(item) {
+            sessionStorage.setItem(item, 'true');
+            displayCart();
+        }
+
+        // This function creates the store
+        function createStore() {
+            const ul = document.createElement('ul');
+            document.body.appendChild(ul);
+
+            availableItems.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item;
+                li.addEventListener('click', () => addItemToCart(item));
+                ul.appendChild(li);
+            });
+        }
+
+        // This function displays the cart
+        function displayCart() {
+            const cartItems = Object.keys(sessionStorage);
+            const cartCount = cartItems.length;
+
+            const shoppingCartMessage = document.createElement('p');
+            shoppingCartMessage.textContent = `You previously had ${cartCount} items in your cart.`;
+
+            const existingShoppingCartMessage = document.getElementById('cartMessage');
+            if (existingShoppingCartMessage) {
+                existingShoppingCartMessage.remove();
+            }
+
+            if (cartCount > 0) {
+                shoppingCartMessage.id = 'shoppingCartMessage';
+                document.body.appendChild(shoppingCartMessage);
+            }
+        }
+
+        // This block checks if session storage is supported
+        if (checkSessionStorage()) {
+            createStore();
+            displayCart();
+        } else {
+            alert('Sorry, your browser does not support Session storage. Try again with a better one.');
+        }
+    </script>
+</body>
+
+</html>
