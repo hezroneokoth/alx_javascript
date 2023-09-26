@@ -2,12 +2,18 @@
 <html>
 
 <head>
-    <title>What is Life</title>
+    <title>DOM Introduction</title>
 </head>
 
 <body>
-    <h1>What is Life?</h1>
-    <p>Life is what you make it.</p>
+    <p id="myParagraph">This is a paragraph.</p>
+    <script>
+        // selects element using its id & stores it in a variable
+        const paragraphElement = document.getElementById('myParagraph');
+
+        // modifies content of <p> element
+        paragraphElement.textContent = "I successfully updated this paragraph with JavaScript";
+    </script>
 </body>
 
 </html>
