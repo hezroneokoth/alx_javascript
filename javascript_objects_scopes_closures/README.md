@@ -200,3 +200,25 @@ Project Link: https://github.com/hezroneokoth/alx_javascript
 This is a list of resources that I have used during the course of this project;
 
 ALX School Concept Page
+
+JS object basics - https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics 
+
+Object-oriented JS - https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript 
+
+Class ES6 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes 
+
+Super ES6 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/super 
+
+Extends ES6 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/extends 
+
+Object prototypes - https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes 
+
+Inheritance in JS - https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript 
+
+Closures - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures 
+
+This/self - https://alistapart.com/article/getoutbindingsituations/ 
+
+Modern JS - https://github.com/mbeaudru/modern-js-cheatsheet
+
+Intro Session - https://youtu.be/Oj5HFfHKBTQ
